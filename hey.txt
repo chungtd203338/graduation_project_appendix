@@ -1,0 +1,5 @@
+hey -z 60s -c 5 -o csv http://helloworld-go.default > result_edge_50_50_5.csv
+
+-z  Thời gian gửi request tới
+-c  Số lượng concurent users
+-o  Xuất ra file csv

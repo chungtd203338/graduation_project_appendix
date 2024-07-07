@@ -1,0 +1,17 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: helloworld-go
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target-burst-capacity: "-1"
+        # autoscaling.knative.dev/min-scale: "2"
+        #autoscaling.knative.dev/initial-scale: "0"
+    spec:
+      containers:
+      - image: gcr.io/knative-samples/helloworld-go
+        env:
+        - name: TARGET
+          value: Ae !!!
